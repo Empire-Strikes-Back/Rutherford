@@ -4,17 +4,6 @@ repl(){
   lein repl :start :host 0.0.0.0 :port 35543
 }
 
-push(){
-  ORIGIN=$(git remote get-url origin)
-  rm -rf .git
-  git init -b main
-  git remote add origin $ORIGIN
-  git config --local include.path ../.gitconfig
-  git add .
-  git commit -m "i am daex program"
-  git push -f -u origin main
-}
-
 fetch_movies(){
     wget "https://github.com/dgraph-io/tutorial/blob/master/resources/1million.rdf.gz?raw=true" -O 1million.rdf.gz -q 
     # -q quiet, no output
