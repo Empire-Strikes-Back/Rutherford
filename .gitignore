@@ -1,3 +1,2 @@
-.cpcache
-target/
-data/
+out/
+.cpcache/
